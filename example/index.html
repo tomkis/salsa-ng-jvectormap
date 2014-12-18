@@ -14,8 +14,8 @@
     angular.module('salsaNg', ['salsaNgJvectormap'])
       .controller('ExampleController', function ($scope) {
         $scope.chartVisualisation = {
-          renderer: function(val) {
-            return [val];
+          renderer: function(val, englishVal) {
+            return [englishVal];
           },
           nullValueColour: '#eaeaea',
           scale: {

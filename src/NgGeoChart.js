@@ -31,6 +31,16 @@ angular.module('salsaNgJvectormap', [])
             scope.chart.updateData(data);
           }
         });
+
+        scope.$on('salsaNgGeoChart:updateSize', function() {
+          scope.updateSize();
+        });
+
+        scope.updateSize = function() {
+          if (scope.chart) {
+            scope.chart.updateSize();
+          }
+        }
       }
     }
   });

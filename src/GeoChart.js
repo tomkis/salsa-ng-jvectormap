@@ -90,7 +90,7 @@ GeoChart.prototype.onMouseMove = function(ev) {
   if (this.hoveredCountry) {
     // little boost to avoid overhead by setting description anytime mouse moves
     if (this.previousHoveredCountry !== this.hoveredCountry) {
-      var description = this.visualisationDescription[this.activeSeries].renderer(this.hoveredCountry); // we use custom rendered from visualisation description to render value
+      var description = this.visualisationDescription[this.activeSeries].renderer(this.hoveredCountry, CountryService.getCountryName(this.hoveredCountry)); // we use custom rendered from visualisation description to render value
       if (description.length > 0) {
         this.tooltip.setDescription(description);
       }
@@ -295,6 +295,13 @@ GeoChart.prototype._setDataToMapAndRedraw = function(populateData) {
   this.map.series.markers[1].setValues(populateData.markersValues);
 
   // just to be sure map fits its parent
+  this.map.updateSize();
+};
+
+/**
+ * Option for updating the map's size
+ */
+GeoChart.prototype.updateSize = function() {
   this.map.updateSize();
 };
 
