@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="salsaNg">
+<head>
+  <meta charset="utf-8">
+  <title>salsa-ng-jvectormap example</title>
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../dist/salsa-ng-jvectormap.min.css" />
+  <script src="../dist/salsa-ng-jvectormap.min.js"></script>
+
+  <script type="text/javascript">
+    angular.module('salsaNg', ['salsaNgJvectormap'])
+      .controller('ExampleController', function ($scope) {
+        $scope.chartVisualisation = {
+          renderer: function(val) {
+            return [val];
+          },
+          nullValueColour: '#eaeaea',
+          scale: {
+            min: 'white',
+            max: 'black'
+          },
+          buckets: 1,
+          scaleFn: 'linear'
+        };
+
+        $scope.chartData = [{
+          'US': 2000
+        }];
+      });
+  </script>
+</head>
+
+<body ng-controller="ExampleController">
+  <salsa-ng-jvectormap salsa-map-visualisation="chartVisualisation" salsa-map-data="chartData" salsa-map-height="300"></salsa-ng-jvectormap>
+</body>
+</html>

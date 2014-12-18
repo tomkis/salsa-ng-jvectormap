@@ -1,0 +1,184 @@
+{
+  "VA": {
+    "latLng": [
+      41.9,
+      12.45
+    ],
+    "name": "Vatican City"
+  },
+  "MC": {
+    "latLng": [
+      43.73,
+      7.41
+    ],
+    "name": "Monaco"
+  },
+  "NR": {
+    "latLng": [
+      -0.52,
+      166.93
+    ],
+    "name": "Nauru"
+  },
+  "TV": {
+    "latLng": [
+      -8.51,
+      179.21
+    ],
+    "name": "Tuvalu"
+  },
+  "SM": {
+    "latLng": [
+      43.93,
+      12.46
+    ],
+    "name": "San Marino"
+  },
+  "LI": {
+    "latLng": [
+      47.14,
+      9.52
+    ],
+    "name": "Liechtenstein"
+  },
+  "MH": {
+    "latLng": [
+      7.11,
+      171.06
+    ],
+    "name": "Marshall Islands"
+  },
+  "KN": {
+    "latLng": [
+      17.3,
+      -62.73
+    ],
+    "name": "Saint Kitts and Nevis"
+  },
+  "MV": {
+    "latLng": [
+      3.2,
+      73.22
+    ],
+    "name": "Maldives"
+  },
+  "MT": {
+    "latLng": [
+      35.88,
+      14.5
+    ],
+    "name": "Malta"
+  },
+  "GD": {
+    "latLng": [
+      12.05,
+      -61.75
+    ],
+    "name": "Grenada"
+  },
+  "VC": {
+    "latLng": [
+      13.16,
+      -61.23
+    ],
+    "name": "Saint Vincent and the Grenadines"
+  },
+  "BB": {
+    "latLng": [
+      13.16,
+      -59.55
+    ],
+    "name": "Barbados"
+  },
+  "AG": {
+    "latLng": [
+      17.11,
+      -61.85
+    ],
+    "name": "Antigua and Barbuda"
+  },
+  "SC": {
+    "latLng": [
+      -4.61,
+      55.45
+    ],
+    "name": "Seychelles"
+  },
+  "PW": {
+    "latLng": [
+      7.35,
+      134.46
+    ],
+    "name": "Palau"
+  },
+  "AD": {
+    "latLng": [
+      42.5,
+      1.51
+    ],
+    "name": "Andorra"
+  },
+  "LC": {
+    "latLng": [
+      14.01,
+      -60.98
+    ],
+    "name": "Saint Lucia"
+  },
+  "FM": {
+    "latLng": [
+      6.91,
+      158.18
+    ],
+    "name": "Federated States of Micronesia"
+  },
+  "SG": {
+    "latLng": [
+      1.3,
+      103.8
+    ],
+    "name": "Singapore"
+  },
+  "KI": {
+    "latLng": [
+      1.46,
+      173.03
+    ],
+    "name": "Kiribati"
+  },
+  "TO": {
+    "latLng": [
+      -21.13,
+      -175.2
+    ],
+    "name": "Tonga"
+  },
+  "DM": {
+    "latLng": [
+      15.3,
+      -61.38
+    ],
+    "name": "Dominica"
+  },
+  "MU": {
+    "latLng": [
+      -20.2,
+      57.5
+    ],
+    "name": "Mauritius"
+  },
+  "BH": {
+    "latLng": [
+      26.02,
+      50.55
+    ],
+    "name": "Bahrain"
+  },
+  "ST": {
+    "latLng": [
+      0.33,
+      6.73
+    ],
+    "name": "Sao Tome and Principe"
+  }
+}
