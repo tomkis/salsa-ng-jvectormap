@@ -11,7 +11,8 @@ angular.module('salsaNgJvectormap', [])
       scope: {
         'salsaMapVisualisation': '=',
         'salsaMapData': '=',
-        'salsaMapHeight': '@'
+        'salsaMapHeight': '@',
+        'salsaPostponeRendering': '@'
       },
       link: function(scope, el) {
         scope.$watch('salsaMapVisualisation', function(visualisation) {
@@ -27,7 +28,7 @@ angular.module('salsaNgJvectormap', [])
         });
 
         scope.$watch('salsaMapData', function(data) {
-          if (scope.chart) {
+          if (scope.chart && !scope.salsaPostponeRendering) {
             scope.chart.updateData(data);
           }
         });
@@ -38,6 +39,7 @@ angular.module('salsaNgJvectormap', [])
 
         scope.updateSize = function() {
           if (scope.chart) {
+            scope.chart.updateData(scope.salsaMapData);
             scope.chart.updateSize();
           }
         }
