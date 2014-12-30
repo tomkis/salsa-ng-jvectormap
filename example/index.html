@@ -29,11 +29,19 @@
         $scope.chartData = [{
           'US': 2000
         }];
+
+        setTimeout(function() {
+          $scope.$broadcast('salsaNgGeoChart:updateSize');
+
+          setTimeout(function() {
+            $scope.$broadcast('salsaNgGeoChart:updateSize');
+          }, 1000)
+        }, 1000);
       });
   </script>
 </head>
 
 <body ng-controller="ExampleController">
-  <salsa-ng-jvectormap salsa-map-visualisation="chartVisualisation" salsa-map-data="chartData" salsa-map-height="300"></salsa-ng-jvectormap>
+  <salsa-ng-jvectormap salsa-map-visualisation="chartVisualisation" salsa-map-data="chartData" salsa-postpone-rendering="true" salsa-map-height="300"></salsa-ng-jvectormap>
 </body>
 </html>

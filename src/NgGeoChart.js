@@ -15,31 +15,40 @@ angular.module('salsaNgJvectormap', [])
         'salsaPostponeRendering': '@'
       },
       link: function(scope, el) {
-        scope.$watch('salsaMapVisualisation', function(visualisation) {
-          var tooltip = new Tooltip();
+        var tooltip = new Tooltip();
 
-          if (!scope.chart) {
-            scope.chart = new GeoChart(el, tooltip, {
-              height: scope.salsaMapHeight
-            });
-          }
-          
-          scope.chart.updateVisualisationDescription(visualisation);
-        });
+        if (!scope.salsaPostponeRendering) {
+          scope.$watch('salsaMapVisualisation', function(visualisation) {
+            if (!scope.chart) {
+              scope.chart = new GeoChart(el, tooltip, {
+                height: scope.salsaMapHeight
+              });
+            }
+            
+            scope.chart.updateVisualisationDescription(visualisation);
+          });
 
-        scope.$watch('salsaMapData', function(data) {
-          if (scope.chart && !scope.salsaPostponeRendering) {
-            scope.chart.updateData(data);
-          }
-        });
+          scope.$watch('salsaMapData', function(data) {
+            if (scope.chart) {
+              scope.chart.updateData(data);
+            }
+          });
+        }
 
         scope.$on('salsaNgGeoChart:updateSize', function() {
           scope.updateSize();
         });
 
         scope.updateSize = function() {
-          if (scope.chart) {
+          if (scope.salsaPostponeRendering) {
+            scope.chart = new GeoChart(el, tooltip, {
+              height: scope.salsaMapHeight
+            });
+            scope.chart.updateVisualisationDescription(scope.salsaMapVisualisation);
             scope.chart.updateData(scope.salsaMapData);
+          }
+
+          if (scope.chart) {
             scope.chart.updateSize();
           }
         }
